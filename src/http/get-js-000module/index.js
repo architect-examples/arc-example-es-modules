@@ -4,7 +4,6 @@ const join = require('path').join
 exports.handler = async function http (req) {
   let module = req.params.module
   let filePath = join(__dirname, 'node_modules', '@architect', 'views', module)
-  console.log('MODULE PATH: ', filePath)
   let exists = fs.existsSync(filePath)
   if (exists) {
     let file = fs.readFileSync(filePath).toString()
