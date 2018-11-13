@@ -1,2 +1,2 @@
-import Message from './hello.mjs'
-Message()
+import Hello from './hello.mjs'
+Hello()
