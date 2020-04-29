@@ -1,7 +1,8 @@
+const arc = require('@architect/functions')
 const fs = require('fs')
 const join = require('path').join
 
-exports.handler = async function http (req) {
+async function route(req) {
   let module = req.params.module
   let filePath = join(__dirname, 'node_modules', '@architect', 'views', module)
   let exists = fs.existsSync(filePath)
@@ -19,3 +20,5 @@ exports.handler = async function http (req) {
     }
   }
 }
+
+exports.handler = arc.http.async(route)
