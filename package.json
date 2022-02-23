@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Example arc app to show how to use ES Modules in your arc project.",
   "dependencies": {
-    "@architect/sandbox": "^4.1.1"
+    "@architect/sandbox": "^5.0.2"
   },
   "scripts": {
     "start": "npx sandbox"
